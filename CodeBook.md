@@ -27,28 +27,28 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 2. **Activity**: This variable records the activity during which the measurements were taken.  Each volunteer performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).  The values in this column will be one of these only.
 
 3. **Signal**:  This variable records the name of the sensor signals obtained from the wearable device on the Subject when performing an activity.  Using the embedded accelerometer and gyroscope of the wearable device, 3-axial linear acceleration and 3-axial angular velocity were captured. The variable can have one of the following 17 values only:  
-[1] "fBodyAcc"             "fBodyAccJerk"         "fBodyAccMag"          "fBodyBodyAccJerkMag"  
+*[1] "fBodyAcc"             "fBodyAccJerk"         "fBodyAccMag"          "fBodyBodyAccJerkMag"  
 [5] "fBodyBodyGyroJerkMag" "fBodyBodyGyroMag"     "fBodyGyro"            "tBodyAcc"  
 [9] "tBodyAccJerk"         "tBodyAccJerkMag"      "tBodyAccMag"          "tBodyGyro"  
 [13] "tBodyGyroJerk"        "tBodyGyroJerkMag"     "tBodyGyroMag"         "tGravityAcc"  
-[17] "tGravityAccMag"  
-The variables are to be read as follows:  
-- *The first letter*: This is either 't' or 'f'.  
-	- *t* - Time domain signals.  
-	- *f* - Fast Fourier Transform (FFT) of these signals.  
-- *The second part*: This can be either  'Body' or 'Gravity'.  
-	- *Body* - Body Acceleration signals.
-	- *Gravity* - Gravity Acceleration signals.
-- *The third part*: This can be either 'Acc' or 'Gyro'
-	- *Acc* - This signal is from Accelerometer embedded in the wearable device.
-	- *Gyro* - This signal is from Gyroscope embedded in the wearable device.
-- *The fourth part*: This can be either 'Jerk', 'Mag' or 'JerkMag' or may not be present for some measurements.
-	- *Jerk* - Jerk Signals obtained from deriving the body linear acceleration and angular velocity in time.
-	- *Mag* - Magnitude of these three-dimensional signals calculated using the Euclidean norm.
-	- *JerkMag* - Magnitude of jerk signals calculated using the Euclidean norm.
-- **Examples**:
-	- *fBodyAcc* - read as Fast Fourier Transform of Body acceleration signal obtained from Accelerometer
-	- *tBodyGyroMag* - read as Magnitude (calculated using the Euclidean norm) of time domain signal of Body acceleration signal obtained from Gyroscope.
+[17] "tGravityAccMag"  *
+The variables are to be read as follows:
+	- *The first letter*: This is either 't' or 'f'.  
+		- *t* - Time domain signals.  
+		- *f* - Fast Fourier Transform (FFT) of these signals.
+	- *The second part*: This can be either  'Body' or 'Gravity'.  
+		- *Body* - Body Acceleration signals.
+		- *Gravity* - Gravity Acceleration signals.
+	- *The third part*: This can be either 'Acc' or 'Gyro'
+		- *Acc* - This signal is from Accelerometer embedded in the wearable device.
+		- *Gyro* - This signal is from Gyroscope embedded in the wearable device.
+	- *The fourth part*: This can be either 'Jerk', 'Mag' or 'JerkMag' or may not be present for some measurements.
+		- *Jerk* - Jerk Signals obtained from deriving the body linear acceleration and angular velocity in time.
+		- *Mag* - Magnitude of these three-dimensional signals calculated using the Euclidean norm.
+		- *JerkMag* - Magnitude of jerk signals calculated using the Euclidean norm.
+	- **Examples**:
+		- *fBodyAcc* - read as Fast Fourier Transform of Body acceleration signal obtained from Accelerometer
+		- *tBodyGyroMag* - read as Magnitude (calculated using the Euclidean norm) of time domain signal of Body acceleration signal obtained from Gyroscope.
 
 4. **Function**: The functions estimated using these signals -
 	- Mean value - mean()
