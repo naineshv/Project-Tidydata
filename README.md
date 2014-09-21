@@ -1,7 +1,7 @@
 ### Script: run_analysis.R 
 **Author:** Nainesh Vashi  
 **Usage Guidelines:**  
-- The script tidies the data set obtained from wearable computing devices and summarizes it to produce a data frame 'Summary'.  It also prints the data frame  to the screen.
+- The script tidies the data set obtained from wearable computing devices and summarizes it to produce a data frame 'Summary'.
 - The script uses/reads the following files for data and information - *X_train.txt, y_train.txt, X_test.txt, y_test.txt, subjects_train.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
 - **For the script to run successfully, all the mentioned files should be in the working directory.**  
 - To run the script execute the following at the prompt,  
