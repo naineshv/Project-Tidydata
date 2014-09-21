@@ -6,6 +6,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
+More information on the dataset is available [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 ### Dataset Details: 
 - File name - summary.dataset.txt 
@@ -60,3 +61,8 @@ The variables are to be read as follows:
 
 7. **Average**: Average value over the number of measurements shown in the Count column grouped by Subject, Activity, Signal, Function and Axis.
 
+### How the data was transformed:
+- The original source of the data is [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+- The script [run_analysis.R](https://github.com/naineshv/Project-Tidydata/blob/master/run_analysis.R) was used to transform the data.
+- The details on how the script runs and transforms the data can be obtained [here](https://github.com/naineshv/Project-Tidydata/blob/master/README.md)
+- The script uses/reads the following files from the above zipped dataset for data and information - *X_train.txt, y_train.txt, subjects_train.txt, X_test.txt, y_test.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
