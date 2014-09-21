@@ -63,6 +63,6 @@ The variables are to be read as follows:
 
 ### How the data was transformed:
 - The original source of the data is [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
-- The script [run_analysis.R](https://github.com/naineshv/Project-Tidydata/blob/master/run_analysis.R) was used to transform the data.
+- The above zipped dataset contains the following files containing data and information about the data- *X_train.txt, y_train.txt, subjects_train.txt, X_test.txt, y_test.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
+- The script [run_analysis.R](https://github.com/naineshv/Project-Tidydata/blob/master/run_analysis.R) was used to transform the above data.
 - The details on how the script runs and transforms the data can be obtained [here](https://github.com/naineshv/Project-Tidydata/blob/master/README.md)
-- The script uses/reads the following files from the above zipped dataset for data and information - *X_train.txt, y_train.txt, subjects_train.txt, X_test.txt, y_test.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
