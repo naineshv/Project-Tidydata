@@ -3,7 +3,7 @@
 **Usage Guidelines:**  
 - The script tidies the data set obtained from wearable computing devices and summarizes it to produce a data frame 'Summary'.
 - The script uses/reads the following files for data and information - *X_train.txt, y_train.txt, X_test.txt, y_test.txt, subjects_train.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
-- **For the script to run successfully, all the mentioned files should be in the working directory.**  
+- **For the script to run successfully, all the data-related files mentioned above should be in the working directory and not in any child directories.**  
 - To run the script execute the following at the prompt,  
 	- *setwd(Path to Working Dir)*
 	- *source(Path to run_Analysis.R)*
@@ -13,6 +13,7 @@
 	
 ### Below are the steps followed (logic) in the script to achieve the required output -
 
+1. The script uses 3 packages - *plyr, dplyr and tidyr*.
 1. Read variable names from the variables file features.txt into a data frame.
 2. Read training data set - X_train.txt, mark column names as feature names from the variables dataframe.
 
