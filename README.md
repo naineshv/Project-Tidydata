@@ -5,8 +5,9 @@
 - The script uses/reads the following files for data and information - *X_train.txt, y_train.txt, X_test.txt, y_test.txt, subjects_train.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
 - **For the script to run successfully, all the mentioned files should be in the working directory.**  
 - To run the script execute the following at the prompt,  
-	- *setwd(<Working Dir>)*
-	- *source(<path to run_Analysis.R>)*
+	- *setwd(Path to Working Dir)*
+	- *source(Path to run_Analysis.R)*
+	- Type **_summary_** at the prompt to view the data.
 
 	
 ### Below are the steps followed (logic) in the script to achieve the required output -
