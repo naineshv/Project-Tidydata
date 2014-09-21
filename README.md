@@ -2,12 +2,14 @@
 **Author:** Nainesh Vashi  
 **Usage Guidelines:**  
 - The script tidies the data set obtained from wearable computing devices and summarizes it to produce a data frame 'Summary'.
-- The script uses/reads the following files for data and information - *X_train.txt, y_train.txt, X_test.txt, y_test.txt, subjects_train.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
-- **For the script to run successfully, all the data-related files mentioned above should be in the working directory and not in any child directories.**  
+- The script uses/reads the following files for data and information - *X_train.txt, y_train.txt, subjects_train.txt, X_test.txt, y_test.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
 - To run the script execute the following at the prompt,  
-	- *setwd(Path to Working Dir)*
+	- *setwd(Path to Working Dir containing Samsung Data Dir - UCI HAR Dataset)*. e.g. If the samsung data directory (UCI HAR Dataset) is in 'C:\myworkdir', use setwd("C:\\myworkdir") 
 	- *source(Path to run_Analysis.R)*
 	- Type **_summary_** at the prompt to view the data.
+- **Please Note:** 
+	- For the script to run successfully, please maintain the directory structure of the samsung data set in the  working directory.
+	- The script has been tested to work with the above directory structure on Windows machines only.
 - The data frame **_summary_** contains 11880 observations of 7 variables.  *__30__ subjects X __6__ activities X __66__ measurements (std and mean only) = __11880__ observations*
 
 	

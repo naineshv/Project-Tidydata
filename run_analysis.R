@@ -5,37 +5,37 @@ suppressMessages(library(tidyr))
 message("The script takes a few seconds to execute.  Please wait till you see the prompt ...")
 
 #data_dir <- "C:\\Videos\\coursera\\Data Science\\workspace\\R\\GettingAndCleaningData\\UCI HAR Dataset\\"
-data_dir <- ""
+data_dir <- "UCI HAR Dataset\\"
 
 # Read variable names
 file <- paste0(data_dir,"features.txt")
 variables_df <- tbl_df(read.delim(file, sep = "", header=F, col.names = c("SerialNo", "Feature")))
 
 # Read training data set - x data
-file <- paste0(data_dir,"X_train.txt")
+file <- paste0(data_dir,"train\\X_train.txt")
 training_data <- tbl_df(read.delim(file, sep = "", header=F, col.names = variables_df$Feature))
 
 # Read and add subjects data to training data set
-file <- paste0(data_dir,"subject_train.txt")
+file <- paste0(data_dir,"train\\subject_train.txt")
 subjects_df <- tbl_df(read.delim(file, sep = "", header=F, col.names = c("Subject")))
 tdata <- mutate(training_data, Subject = subjects_df$Subject)
 
 # Read and add activity data to training data set
-file <- paste0(data_dir,"y_train.txt")
+file <- paste0(data_dir,"train\\y_train.txt")
 activity_df <- tbl_df(read.delim(file, sep = "", header=F, col.names = c("Activity")))
 trdata <- mutate(tdata, Activity = as.factor(activity_df$Activity))
 
 # Read test data set - x data
-file <- paste0(data_dir,"X_test.txt")
+file <- paste0(data_dir,"test\\X_test.txt")
 test_data <- tbl_df(read.delim(file, sep = "", header=F, col.names = variables_df$Feature))
 
 # Read and add subjects data to test data set
-file <- paste0(data_dir,"subject_test.txt")
+file <- paste0(data_dir,"test\\subject_test.txt")
 subjects_df <- tbl_df(read.delim(file, sep = "", header=F, col.names = c("Subject")))
 ttdata <- mutate(test_data, Subject = subjects_df$Subject)
 
 # Read and add activity/Y data to test data set
-file <- paste0(data_dir,"y_test.txt")
+file <- paste0(data_dir,"test\\y_test.txt")
 activity_df <- tbl_df(read.delim(file, sep = "", header=F, col.names = c("Activity")))
 ttdata <- mutate(ttdata, Activity = as.factor(activity_df$Activity))
 
@@ -79,6 +79,4 @@ summary <- tdata %>%
                   Average = mean(Value))
 
 message("The data set is stored in a variable called 'summary'.  Type summary at the prompt to view the data set.")
-
-
 
