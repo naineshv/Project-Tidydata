@@ -8,6 +8,7 @@
 	- *setwd(Path to Working Dir)*
 	- *source(Path to run_Analysis.R)*
 	- Type **_summary_** at the prompt to view the data.
+- The data frame **_summary_** contains 11880 observations of 7 variables.  *__30__ subjects X __6__ activities X __66__ measurements (std and mean only) = __11880__ observations*
 
 	
 ### Below are the steps followed (logic) in the script to achieve the required output -

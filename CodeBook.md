@@ -31,7 +31,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 [5] "fBodyBodyGyroJerkMag" "fBodyBodyGyroMag"     "fBodyGyro"            "tBodyAcc"  
 [9] "tBodyAccJerk"         "tBodyAccJerkMag"      "tBodyAccMag"          "tBodyGyro"  
 [13] "tBodyGyroJerk"        "tBodyGyroJerkMag"     "tBodyGyroMag"         "tGravityAcc"  
-[17] "tGravityAccMag"  *
+[17] "tGravityAccMag"*  
 The variables are to be read as follows:
 	- *The first letter*: This is either 't' or 'f'.  
 		- *t* - Time domain signals.  
@@ -46,7 +46,7 @@ The variables are to be read as follows:
 		- *Jerk* - Jerk Signals obtained from deriving the body linear acceleration and angular velocity in time.
 		- *Mag* - Magnitude of these three-dimensional signals calculated using the Euclidean norm.
 		- *JerkMag* - Magnitude of jerk signals calculated using the Euclidean norm.
-	- **Examples**:
+	- *Examples*:
 		- *fBodyAcc* - read as Fast Fourier Transform of Body acceleration signal obtained from Accelerometer
 		- *tBodyGyroMag* - read as Magnitude (calculated using the Euclidean norm) of time domain signal of Body acceleration signal obtained from Gyroscope.
 
