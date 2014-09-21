@@ -1,14 +1,15 @@
 ### Script: run_analysis.R 
 **Author:** Nainesh Vashi  
-**Usage:**  
+**Usage Guidelines:**  
 - The script tidies the data set obtained from wearable computing devices and summarizes it to produce a data frame 'Summary'.  It also prints the data frame  to the screen.
-- The script uses/reads the following files for data and information - X_train.txt, y_train.txt, X_test.txt, y_test.txt, subjects_train.txt, subjects_test.txt, features.txt, activity_labels.txt.  For the script to run, all the above files should be in the working directory.  
+- The script uses/reads the following files for data and information - *X_train.txt, y_train.txt, X_test.txt, y_test.txt, subjects_train.txt, subjects_test.txt, features.txt, activity_labels.txt*. 
+- **For the script to run successfully, all the mentioned files should be in the working directory.**  
 - To run the script execute the following at the prompt,  
-	- setwd(<Working Dir>)  
-	- source(<path to run_Analysis.R>)
+	- *setwd(<Working Dir>)*
+	- *source(<path to run_Analysis.R>)*
 
 	
-### Below are the steps followed to achieve the required output of the project.
+### Below are the steps followed (logic) in the script to achieve the required output -
 
 1. Read variable names from the variables file features.txt into a data frame.
 2. Read training data set - X_train.txt, mark column names as feature names from the variables dataframe.
@@ -37,21 +38,20 @@
 16. Prepare column names for tidying the data set
 	- Convert 3 successive dots seen just before the axis name to '-'
 	- Remove the trailing dots in each name
-	- Adjust tha magnitude variables to include NA at the end (as these are are not axes-related)
+	- Adjust the magnitude variables to include NA at the end (as these are are not axes-related)
 
-17.  Tidy the data 
-18.  Reorganize the data according to feature, function and Axis.  I have used chaining here
+17.  Tidy the data - Reorganize the data according to feature, function and Axis.  I have used chaining for the steps below -
 	- Use gather() to gather the data using all columns except the Subject and Activity columns.  I have used 'Signal.FunctionAxis' as the key and 'Value' as the value.
-		- The 'Signal.FunctionAxis' column has values in the format Signal.Function-AxisName e.g. tBodyAcc.mean-X, tGravityAcc.mean-Y, fBodyAccMag.std-NA, etc.
+		- The 'Signal.FunctionAxis' column has values in the format *Signal.Function-AxisName* e.g. *tBodyAcc.mean-X, tGravityAcc.mean-Y, fBodyAccMag.std-NA, etc*.
 	- Use separate() to separate the above column in to three columns viz. Signal, Function and Axis
-	- Use arrange to sort it in the order Subject, Activity, Signal, Function, Axis
+	- Use arrange() to sort it in the order Subject, Activity, Signal, Function, Axis
 
-19. Use meaningful names for values of Function: mean -> Mean value, std -> Standard Deviation
-20. Summarize by variable, activity and subject; variable is a combination of signal, function and axis.
+18. Use meaningful names for values of Function: mean -> Mean value, std -> Standard Deviation
+19. Summarize by variable, activity and subject; variable is a combination of signal, function and axis.
 
-21. Use meaningful names for values of Function
+20. Use meaningful names for values of Function
 
-22. Summarize by variable, activity and subject; variable is a combination of signal, function and axis
+21. Summarize by variable, activity and subject using the steps below; variable is a combination of signal, function and axis
 	- Use group by on Subject, Activity, Signal, Function, Axis
 	- Use summarize to get the Count = n() and the Average = mean(Value) columns. 
 	- Get the output in a data frame called summary
